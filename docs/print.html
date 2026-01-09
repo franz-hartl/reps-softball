@@ -42,12 +42,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+    }
+
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('REPS-Background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 24, 41, 0.75);
+      z-index: 1;
     }
 
     .print-card {
       text-align: center;
       padding: 4rem 3rem;
       max-width: 600px;
+      position: relative;
+      z-index: 2;
     }
 
     .tagline {
@@ -122,6 +148,9 @@
   </style>
 </head>
 <body>
+
+  <div class="bg"></div>
+  <div class="bg-overlay"></div>
 
   <div class="print-card">
     <p class="tagline">Indoor Softball Training · Milford, CT</p>
