@@ -63,6 +63,9 @@ Indoor Softball Training · Milford, CT
 ### Brand Meaning (for reference, not displayed)
 R.E.P.S. = Ripple Effect of Preparation & Sacrifice
 
+### Official Logo
+R.E.P.S. with green dots, "SOFTBALL" underneath in green (Crete Round font)
+
 ### Headlines (with accent word in green)
 - Lane **Rates**
 - Built by **Milford**
@@ -79,8 +82,7 @@ Indoor Softball Training · Milford, CT
 
 ### Main Headline
 ```
-She wants to get better.
-This is where that happens.
+Built different.
 ```
 
 ### Sub-copy
@@ -89,7 +91,7 @@ Built by champions. For the next one.
 ```
 
 ### CTAs
-- Primary (Pink): "Call Us" — for new families, calls phone for onboarding
+- Primary (Pink): "Email Us" — for new families, opens email to Rippleeffectsoftball@gmail.com
 - Secondary (Green): "Book" — for existing users, opens booking system
 
 ### Location Line

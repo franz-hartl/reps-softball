@@ -6,7 +6,9 @@
 
 **Positioning:** This isn't a baseball facility that also does softball. It's a softball facility.
 
-**Tagline:** Indoor Softball Training · Milford, CT
+**Tagline:** Built different.
+
+**Descriptor:** Indoor Softball Training · Milford, CT
 
 ---
 
@@ -51,7 +53,7 @@ If R.E.P.S. were a person:
 
 | Context | Tone | Example |
 |---------|------|---------|
-| Hero | Clear, direct | "She wants to get better. This is where that happens." |
+| Hero | Clear, direct | "Built different." |
 | About | Confident, warm | "Nine state championships. Hall of Fame coaches. A place for the next generation." |
 | Booking | Efficient, friendly | "Book online anytime. Swipe in. Get to work." |
 | Social | Real, celebratory | "Saturday morning. Six lanes full. This is what it's about." |
@@ -78,12 +80,15 @@ If R.E.P.S. were a person:
 
 The R.E.P.S. wordmark uses **Crete Round** typeface with periods between letters.
 
+**Official Logo:** R.E.P.S. with green dots, "SOFTBALL" underneath in green (Crete Round font)
+
 ```
 R.E.P.S.
+SOFTBALL
 ```
 
-**Header version:** White letters, pink dots (animated)
-**Hero version:** White letters, pink dots (animated)
+**Header version:** White letters, green dots (animated)
+**Hero version:** White letters, green dots (animated with pink flash)
 
 - Always use full wordmark with periods
 - Never stretch, rotate, or alter proportions
@@ -120,13 +125,13 @@ R.E.P.S.
 
 **Usage Rules:**
 - Navy dominates backgrounds
-- Green = system actions (Book button)
-- Pink = human actions (Register button, call to action)
-- Pink dots animate through green flash
+- Green = primary accent (Book button, logo dots)
+- Pink = secondary accent (Email Us button)
+- Green dots animate through pink flash
 
 ### Button Styles
 
-**Register (Pink):** Primary action for new users → calls phone
+**Email Us (Pink):** Primary action for new users → opens email
 ```css
 background: var(--pink);
 color: var(--white);
