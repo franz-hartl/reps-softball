@@ -277,9 +277,15 @@
       height: 115%;
       background-image: url('REPS-Background.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: 70% center; /* Mobile: show batter (right side) */
       background-repeat: no-repeat;
       z-index: 0;
+    }
+
+    @media (min-width: 768px) {
+      .hero-bg {
+        background-position: center; /* Desktop: show both figures */
+      }
     }
 
     .hero-overlay {
