@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R.E.P.S. — Indoor Softball Training in Milford, CT</title>
+  <meta name="description" content="Indoor softball training in Milford, CT. 7,000 sq ft, six lanes, pitching machines. Book a lane online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #1a2744;
+      --navy-dark: #0f1829;
+      --navy-light: #2a3d5c;
+      --neon: #39ff14;
+      --neon-dim: #2ecc0f;
+      --neon-glow: rgba(57, 255, 20, 0.3);
+      --pink: #ff0080;
+      --white: #ffffff;
+      --gray: #a0a8b4;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--navy-dark);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--neon);
+      color: var(--navy-dark);
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* Visually Hidden (for screen readers) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Focus Styles */
+    *:focus {
+      outline: none;
+    }
+
+    *:focus-visible {
+      outline: 2px solid var(--neon);
+      outline-offset: 3px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    .btn:focus-visible {
+      outline: 2px solid var(--neon);
+      outline-offset: 3px;
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 var(--neon-glow); }
+      50% { box-shadow: 0 0 20px 5px var(--neon-glow); }
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(180deg, rgba(15, 24, 41, 0.95) 0%, rgba(15, 24, 41, 0) 100%);
+      padding-bottom: 2rem;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Crete Round', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      margin-left: 33px;
+    }
+
+    .logo:hover {
+      transform: scale(1.02);
+    }
+
+    .logo .dot {
+      display: inline-block;
+      color: var(--white);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--neon);
+      color: var(--navy-dark);
+      box-shadow: 0 0 20px var(--neon-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--neon-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 30px var(--neon-glow);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-register {
+      background: var(--pink);
+      color: var(--white);
+      box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
+    }
+
+    .btn-register:hover {
+      background: #e60073;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 30px rgba(255, 0, 128, 0.4);
+    }
+
+    .btn-small {
+      padding: 0.625rem 1.25rem;
+      font-size: 0.75rem;
+    }
+
+    .header-ctas {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    /* Hero with Background Image */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: fixed;
+      top: -7.5%;
+      left: -7.5%;
+      width: 115%;
+      height: 115%;
+      background-image: url('REPS-Background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(15, 24, 41, 0.95) 0%,
+        rgba(15, 24, 41, 0.7) 40%,
+        rgba(15, 24, 41, 0.3) 70%,
+        rgba(15, 24, 41, 0.1) 100%
+      );
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero-bg {
+        background-position: center center;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(15, 24, 41, 0.85) 0%,
+          rgba(15, 24, 41, 0.6) 50%,
+          rgba(15, 24, 41, 0.85) 100%
+        );
+      }
+    }
+
+    .hero-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4rem;
+        padding: 6rem 2rem 4rem;
+      }
+    }
+
+    .hero-content {
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @media (min-width: 900px) {
+      .hero-content {
+        text-align: left;
+      }
+    }
+
+    .hero-wordmark {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(3.5rem, 10vw, 5.5rem);
+      letter-spacing: 0.12em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 0 60px rgba(57, 255, 20, 0.2);
+    }
+
+    .hero-wordmark .dot {
+      display: inline-block;
+      color: var(--pink);
+      text-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+      animation: ball-pass 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .hero-wordmark .dot:nth-of-type(1) { animation-delay: 0s; }
+    .hero-wordmark .dot:nth-of-type(2) { animation-delay: 0.12s; }
+    .hero-wordmark .dot:nth-of-type(3) { animation-delay: 0.24s; }
+    .hero-wordmark .dot:nth-of-type(4) { animation-delay: 0.36s; }
+
+    @keyframes ball-pass {
+      0%, 25%, 100% {
+        color: var(--pink);
+        text-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+      }
+      8%, 12% {
+        color: var(--neon);
+        text-shadow: 0 0 25px var(--neon-glow), 0 0 50px var(--neon-glow);
+      }
+    }
+
+    .hero-tagline {
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--neon);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px var(--neon-glow);
+    }
+
+    .hero-headline {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    @media (min-width: 900px) {
+      .hero-sub {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 899px) {
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-ctas {
+        justify-content: flex-start;
+      }
+    }
+
+    .hero-location {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .hero-location a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy-light);
+      transition: border-color 0.2s ease;
+    }
+
+    .hero-location a:hover {
+      border-color: var(--neon);
+    }
+
+    .hero-location .divider {
+      margin: 0 0.5rem;
+      color: var(--navy-light);
+    }
+
+    /* Hero pricing card */
+    .hero-pricing {
+      background: rgba(15, 24, 41, 0.9);
+      border: 1px solid var(--navy-light);
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      animation: slideInRight 0.8s ease-out 0.2s both;
+    }
+
+    .hero-pricing h2 {
+      font-family: 'Crete Round', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .hero-pricing h2 .accent {
+      color: var(--neon);
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(42, 61, 92, 0.5);
+      font-size: 0.9375rem;
+      transition: background 0.2s ease;
+    }
+
+    .price-row:hover {
+      background: rgba(42, 61, 92, 0.2);
+      margin: 0 -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .price-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .price-list {
+      margin: 0;
+    }
+
+    .price-row dt {
+      color: var(--gray);
+    }
+
+    .price-row dd {
+      color: var(--neon);
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .membership-row {
+      border-top: 1px solid rgba(57, 255, 20, 0.2);
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+    }
+
+    .membership-row dt {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .pricing-note {
+      font-size: 0.8125rem;
+      color: var(--gray);
+      text-align: center;
+      margin-top: 1.25rem;
+      font-style: italic;
+    }
+
+    .pricing-cta {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .pricing-cta .btn {
+      width: 100%;
+    }
+
+    /* Section base */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title .accent {
+      color: var(--neon);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy-dark);
+      border-top: 1px solid var(--navy-light);
+      padding: 2.5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    @media (min-width: 600px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--neon);
+    }
+
+    .footer-copy {
+      color: var(--gray);
+      font-size: 0.8125rem;
+    }
+
+    /* About Section */
+    .about-section {
+      background: var(--navy-dark);
+      padding: 5rem 2rem 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-headline {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .about-sub {
+      text-align: center;
+      color: var(--gray);
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .about-cta {
+      text-align: center;
+      font-family: 'Crete Round', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 400;
+      color: var(--neon);
+      text-shadow: 0 0 30px var(--neon-glow);
+      margin: 0 auto 3.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 600px) {
+      .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    .info-item h3 {
+      font-family: 'Crete Round', serif;
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .info-item p {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .contact-label {
+      font-size: 0.875rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-links {
+      font-size: 1.0625rem;
+    }
+
+    .contact-links a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy-light);
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      border-color: var(--neon);
+    }
+
+    .contact-links .divider {
+      margin: 0 0.75rem;
+      color: var(--navy-light);
+    }
+
+    .questions-line {
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.9375rem;
+      margin-top: 2rem;
+    }
+
+    .questions-line a {
+      color: var(--neon);
+      text-decoration: none;
+    }
+
+    .questions-line a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      color: var(--gray);
+      font-size: 0.8125rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></a>
+      <div class="header-ctas">
+        <a href="tel:+12038045935" class="btn btn-register">Call Us</a>
+        <a href="https://book.runswiftapp.com/facilities/reps" class="btn btn-primary">Book<span class="sr-only"> (opens booking system)</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with Background Image -->
+  <main id="main">
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Softball pitcher silhouette"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-tagline">Indoor Softball Training · Milford, CT</p>
+        <h1 class="hero-wordmark">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></h1>
+        <p class="hero-headline">She wants to get better.<br>This is where that happens.</p>
+        <p class="hero-sub">Built by champions. For the next one.</p>
+        <p class="hero-location">
+          <a href="https://maps.google.com/?q=674+Naugatuck+Ave+Milford+CT+06461" target="_blank" rel="noopener">674 Naugatuck Ave, Milford CT<span class="sr-only"> (opens in Google Maps)</span></a>
+          <span class="divider">·</span>
+          <a href="tel:+12038045935">(203) 804-5935</a>
+        </p>
+      </div>
+      <div class="hero-pricing">
+        <h2>Lane <span class="accent">Rates</span></h2>
+        <dl class="price-list">
+          <div class="price-row">
+            <dt>Pitching Lane</dt>
+            <dd>$25/30min</dd>
+          </div>
+          <div class="price-row">
+            <dt>Batting Lane</dt>
+            <dd>$30/30min</dd>
+          </div>
+          <div class="price-row">
+            <dt>Half Facility (3 lanes)</dt>
+            <dd>$100/hr</dd>
+          </div>
+          <div class="price-row">
+            <dt>Full Facility (6 lanes)</dt>
+            <dd>$200/hr</dd>
+          </div>
+          <div class="price-row membership-row">
+            <dt>Monthly Membership</dt>
+            <dd>$100/mo</dd>
+          </div>
+        </dl>
+        <p class="pricing-note">Pitching machines included. 4 batting lanes, 2 pitching lanes.</p>
+        <div class="pricing-cta">
+          <a href="https://book.runswiftapp.com/facilities/reps" class="btn btn-primary">Book a Lane</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section">
+    <div class="about-inner">
+      <h2 class="about-headline">This is a softball facility.</h2>
+      <p class="about-sub">Nine state championships. Hall of Fame coaches.</p>
+      <p class="about-cta">Building tradition.</p>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>First Time?</h3>
+          <p>Call or text. We'll get her set up.</p>
+        </div>
+        <div class="info-item">
+          <h3>Ready to Work?</h3>
+          <p>Book online. Swipe in. Get after it.</p>
+        </div>
+        <div class="info-item">
+          <h3>What to Bring</h3>
+          <p>Her bat and glove. Helmets and machines are here.</p>
+        </div>
+      </div>
+
+      <p class="questions-line">Questions? <a href="tel:+12038045935">(203) 804-5935</a></p>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></a>
+      <nav class="footer-links" aria-label="Social media">
+        <a href="https://www.facebook.com/share/1WPwRHXjRq/" target="_blank" rel="noopener">Facebook<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="https://www.instagram.com/repssoftball" target="_blank" rel="noopener">Instagram<span class="sr-only"> (opens in new tab)</span></a>
+      </nav>
+      <p class="footer-copy">© 2025 R.E.P.S. Softball · Milford, CT</p>
+      <p class="footer-contact">674 Naugatuck Ave · (203) 804-5935</p>
+    </div>
+  </footer>
+
+</body>
+</html>
