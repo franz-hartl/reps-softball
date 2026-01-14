@@ -774,6 +774,121 @@
       font-size: 1rem;
       margin-top: 0.5rem;
     }
+
+    /* Hours Section */
+    .hours-section {
+      background: var(--navy);
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hours-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .opening-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hours-headline {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hours-time {
+      font-size: 1.5rem;
+      color: var(--neon);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hours-note {
+      color: var(--gray);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    /* Team Section */
+    .team-section {
+      background: var(--navy-dark);
+      padding: 5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .team-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .team-headline {
+      font-family: 'Crete Round', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      text-align: center;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .team-sub {
+      text-align: center;
+      color: var(--gray);
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 700px) {
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-card h3 {
+      font-family: 'Crete Round', serif;
+      font-size: 1.375rem;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.875rem;
+      color: var(--neon);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -793,7 +908,7 @@
         <p class="hero-softball">SOFTBALL</p>
         <p class="hero-headline">Built different.</p>
         <div class="hero-ctas">
-          <a href="mailto:Rippleeffectsoftball@gmail.com" class="btn btn-register">Email to Register</a>
+          <a href="mailto:Rippleeffectsoftball@gmail.com" class="btn btn-register">New? Email Us</a>
           <a href="https://book.runswiftapp.com/facilities/reps" class="btn btn-primary">Book a Lane<span class="sr-only"> (opens booking system)</span></a>
         </div>
         <p class="hero-location">
@@ -822,7 +937,7 @@
             <dd>$200/hr</dd>
           </div>
           <div class="price-row membership-row">
-            <dt>Monthly Membership</dt>
+            <dt>Clubhouse Membership</dt>
             <dd>$100/mo</dd>
           </div>
         </dl>
@@ -854,6 +969,41 @@
       <p class="equipment-line">Bring her bat and glove. Helmets and machines are here.</p>
 
       <p class="questions-line">Questions? <a href="mailto:Rippleeffectsoftball@gmail.com">Rippleeffectsoftball@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section class="hours-section">
+    <div class="hours-inner">
+      <span class="opening-badge">Opening February 2026</span>
+      <h2 class="hours-headline">Open early. Open late.</h2>
+      <p class="hours-time">7am – 10pm, 7 days a week</p>
+      <p class="hours-note">Book a lane, show up, get to work.</p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team-section">
+    <div class="team-inner">
+      <h2 class="team-headline">Built by Milford</h2>
+      <p class="team-sub">Women who played. Coaches who stayed. This is who's behind R.E.P.S.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Suzette Gehl</h3>
+          <p class="team-role">Owner</p>
+          <p class="team-bio">Pace University Hall of Fame. Career leader in RBIs, second in batting average. Came back to give the next generation the same opportunity she had.</p>
+        </div>
+        <div class="team-card">
+          <h3>Jeanette Tierney</h3>
+          <p class="team-role">Owner</p>
+          <p class="team-bio">12 varsity letters at Foran High — only the third woman in school history. Overcame a knee injury to earn a D1 scholarship. Now runs Barracuda Travel Softball.</p>
+        </div>
+        <div class="team-card">
+          <h3>Joe Urban</h3>
+          <p class="team-role">Coach</p>
+          <p class="team-bio">25 years developing Milford athletes. State title and ESPN Regional Finals. Focused on building confident competitors, not just skilled players.</p>
+        </div>
+      </div>
     </div>
   </section>
   </main>
