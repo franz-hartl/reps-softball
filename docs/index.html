@@ -143,33 +143,13 @@
       50% { box-shadow: 0 0 20px 5px var(--neon-glow); }
     }
 
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: linear-gradient(180deg, rgba(15, 24, 41, 0.95) 0%, rgba(15, 24, 41, 0) 100%);
-      padding-bottom: 2rem;
-    }
-
-    .header-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1.25rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
+    /* Logo (footer) */
     .logo {
       text-decoration: none;
       transition: transform 0.2s ease;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-left: 33px;
     }
 
     .logo:hover {
@@ -253,12 +233,6 @@
       font-size: 0.75rem;
     }
 
-    .header-ctas {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
     /* Hero with Background Image */
     .hero {
       min-height: 100vh;
@@ -269,6 +243,7 @@
       overflow: hidden;
     }
 
+    /* Mobile-first: show batter on right */
     .hero-bg {
       position: fixed;
       top: -7.5%;
@@ -277,40 +252,52 @@
       height: 115%;
       background-image: url('Spring-Softball.jpg');
       background-size: cover;
-      background-position: 93% center; /* Mobile: show batter (right side) */
+      background-position: 70% center; /* Mobile: favor batter while showing field context */
       background-repeat: no-repeat;
       z-index: 0;
     }
 
-    @media (min-width: 768px) {
-      .hero-bg {
-        background-position: center; /* Desktop: show both figures */
-      }
-    }
-
+    /* Mobile overlay - lighter in middle to reveal batter */
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        90deg,
-        rgba(15, 24, 41, 0.95) 0%,
-        rgba(15, 24, 41, 0.7) 40%,
-        rgba(15, 24, 41, 0.3) 70%,
-        rgba(15, 24, 41, 0.1) 100%
+        180deg,
+        rgba(15, 24, 41, 0.85) 0%,
+        rgba(15, 24, 41, 0.5) 45%,
+        rgba(15, 24, 41, 0.4) 65%,
+        rgba(15, 24, 41, 0.85) 100%
       );
       z-index: 1;
     }
 
-    @media (max-width: 900px) {
+    /* Tablet */
+    @media (min-width: 768px) {
+      .hero-bg {
+        background-position: 60% center;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(15, 24, 41, 0.9) 0%,
+          rgba(15, 24, 41, 0.6) 50%,
+          rgba(15, 24, 41, 0.25) 100%
+        );
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
       .hero-bg {
         background-position: center center;
       }
       .hero-overlay {
         background: linear-gradient(
-          180deg,
-          rgba(15, 24, 41, 0.85) 0%,
-          rgba(15, 24, 41, 0.6) 50%,
-          rgba(15, 24, 41, 0.85) 100%
+          90deg,
+          rgba(15, 24, 41, 0.95) 0%,
+          rgba(15, 24, 41, 0.7) 40%,
+          rgba(15, 24, 41, 0.3) 70%,
+          rgba(15, 24, 41, 0.1) 100%
         );
       }
     }
@@ -318,7 +305,7 @@
     .hero-inner {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 8rem 2rem 4rem;
+      padding: 4rem 2rem;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr;
@@ -332,13 +319,37 @@
       .hero-inner {
         grid-template-columns: 1.1fr 0.9fr;
         gap: 4rem;
-        padding: 6rem 2rem 4rem;
+        padding: 4rem 2rem;
       }
     }
 
     .hero-content {
       text-align: center;
       animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Mobile typography adjustments */
+    @media (max-width: 767px) {
+      .hero-inner {
+        padding: 3rem 1.5rem;
+      }
+      .hero-content {
+        text-shadow: 0 2px 15px rgba(15, 24, 41, 0.6);
+      }
+      .hero-tagline {
+        font-size: 0.875rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.625rem;
+      }
+      .hero-softball {
+        margin-bottom: 1.5rem;
+      }
+      .hero-headline {
+        margin-bottom: 1.5rem;
+      }
+      .hero-location {
+        font-size: 0.9375rem;
+      }
     }
 
     @media (min-width: 900px) {
@@ -351,7 +362,8 @@
       font-family: 'Crete Round', serif;
       font-size: clamp(3.5rem, 10vw, 5.5rem);
       letter-spacing: 0.12em;
-      margin-bottom: 0;
+      margin-bottom: 0.125rem;
+      line-height: 1;
       text-shadow: 0 0 60px rgba(57, 255, 20, 0.2);
     }
 
@@ -379,31 +391,33 @@
     }
 
     .hero-tagline {
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
       color: var(--neon);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.875rem;
       text-shadow: 0 0 10px var(--neon-glow);
     }
 
     .hero-softball {
       font-family: 'Crete Round', serif;
       font-size: clamp(2.25rem, 7vw, 3.75rem);
-      letter-spacing: 0.15em;
+      letter-spacing: 0.2em;
       color: var(--neon);
       text-shadow: 0 0 20px var(--neon-glow);
-      margin-bottom: 1rem;
+      margin-bottom: 1.75rem;
       text-transform: uppercase;
+      line-height: 1;
     }
 
     .hero-headline {
       font-family: 'Crete Round', serif;
       font-size: clamp(2.25rem, 6vw, 3.5rem);
       font-weight: 400;
-      margin-bottom: 1.25rem;
-      line-height: 1.3;
+      margin-bottom: 1.75rem;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
     }
 
     .hero-sub {
@@ -430,7 +444,7 @@
     .hero-ctas {
       display: flex;
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -442,8 +456,10 @@
     }
 
     .hero-location {
-      font-size: 1.125rem;
+      font-size: 1rem;
       color: var(--gray);
+      letter-spacing: 0.02em;
+      line-height: 1.5;
     }
 
     .hero-location a {
@@ -474,9 +490,10 @@
     .hero-pricing h2 {
       font-family: 'Crete Round', serif;
       font-size: 1.75rem;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       margin-bottom: 1.5rem;
       text-align: center;
+      line-height: 1.2;
     }
 
     .hero-pricing h2 .accent {
@@ -490,6 +507,7 @@
       padding: 0.85rem 0;
       border-bottom: 1px solid rgba(42, 61, 92, 0.5);
       font-size: 1.0625rem;
+      line-height: 1.4;
       transition: background 0.2s ease;
     }
 
@@ -531,11 +549,13 @@
     }
 
     .pricing-note {
-      font-size: 1rem;
+      font-size: 0.9375rem;
       color: var(--gray);
       text-align: center;
       margin-top: 1.25rem;
       font-style: italic;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
     }
 
     .pricing-cta {
@@ -640,17 +660,18 @@
       font-family: 'Crete Round', serif;
       font-size: clamp(2.5rem, 6vw, 3.5rem);
       text-align: center;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
       letter-spacing: 0.02em;
+      line-height: 1.2;
     }
 
     .about-sub {
       text-align: center;
       color: var(--gray);
       font-size: clamp(1.25rem, 3vw, 1.5rem);
-      line-height: 1.6;
+      line-height: 1.7;
       max-width: 600px;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 2rem;
     }
 
     .about-cta {
@@ -660,8 +681,9 @@
       font-weight: 400;
       color: var(--neon);
       text-shadow: 0 0 30px var(--neon-glow);
-      margin: 0 auto 3.5rem;
+      margin: 0 auto 4rem;
       letter-spacing: 0.03em;
+      line-height: 1.2;
     }
 
     .info-grid {
@@ -759,20 +781,6 @@
   <!-- Skip Link -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
-  <header>
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <span class="logo-reps">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></span>
-        <span class="logo-softball">Softball</span>
-      </a>
-      <div class="header-ctas">
-        <a href="mailto:Rippleeffectsoftball@gmail.com" class="btn btn-register">Email Us</a>
-        <a href="https://book.runswiftapp.com/facilities/reps" class="btn btn-primary">Book<span class="sr-only"> (opens booking system)</span></a>
-      </div>
-    </div>
-  </header>
-
   <!-- Hero with Background Image -->
   <main id="main">
   <section class="hero">
@@ -784,6 +792,10 @@
         <h1 class="hero-wordmark">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></h1>
         <p class="hero-softball">SOFTBALL</p>
         <p class="hero-headline">Built different.</p>
+        <div class="hero-ctas">
+          <a href="mailto:Rippleeffectsoftball@gmail.com" class="btn btn-register">Email to Register</a>
+          <a href="https://book.runswiftapp.com/facilities/reps" class="btn btn-primary">Book a Lane<span class="sr-only"> (opens booking system)</span></a>
+        </div>
         <p class="hero-location">
           <a href="https://maps.google.com/?q=674+Naugatuck+Ave+Milford+CT+06461" target="_blank" rel="noopener">674 Naugatuck Ave, Milford CT<span class="sr-only"> (opens in Google Maps)</span></a>
           <span class="divider">·</span>
@@ -825,8 +837,9 @@
   <!-- About -->
   <section class="about-section">
     <div class="about-inner">
-      <h2 class="about-headline">This is a softball facility for players who want to work.</h2>
-      <p class="about-sub">The <span class="accent">Ripple Effect</span> of Preparation & Sacrifice. Records still standing. Champions still coaching.</p>
+      <h2 class="about-headline">This is a softball facility.</h2>
+      <p class="about-sub">Not a baseball place that also does softball. A softball facility — built by women who played, for the players coming up behind them.</p>
+      <p class="about-sub">She doesn't need to be elite to train here. She needs to want to get better.</p>
 
       <div class="info-grid">
         <div class="info-item">
@@ -852,7 +865,7 @@
         <span class="logo-reps">R<span class="dot">.</span>E<span class="dot">.</span>P<span class="dot">.</span>S<span class="dot">.</span></span>
         <span class="logo-softball">Softball</span>
       </a>
-      <p class="footer-copy">© 2025 R.E.P.S. Softball · Milford, CT</p>
+      <p class="footer-copy">© 2026 R.E.P.S. Softball · Milford, CT</p>
       <p class="footer-contact">674 Naugatuck Ave · (203) 804-5935</p>
     </div>
   </footer>
