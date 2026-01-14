@@ -179,7 +179,28 @@ They need to feel:
 - Embedded CSS
 - Google Fonts (Crete Round, Nunito)
 - No JavaScript required (CSS animations only)
-- Hosted on GitHub Pages at `/docs/index.html`
+
+---
+
+## Hosting & Deployment
+
+| Service | Details |
+|---------|---------|
+| **Hosting** | Cloudflare Pages |
+| **Pages URL** | https://reps-softball.pages.dev |
+| **Custom Domain** | repssoftball.com (transfer from Wix in progress) |
+| **GitHub Repo** | github.com/franz-hartl/reps-softball |
+| **Build Output** | `docs` folder |
+| **Build Command** | None (static HTML) |
+
+### Deployment Notes
+- Site auto-deploys when changes are pushed to `main` branch
+- Domain was originally registered at Wix, being transferred to Cloudflare Registrar
+- Cloudflare account: Rippleeffectsoftball@gmail.com
+
+### DNS Status (as of Jan 2026)
+- Domain added to Cloudflare, waiting for nameserver propagation
+- Transfer initiated from Wix — requires EPP code and approval
 
 ---
 
