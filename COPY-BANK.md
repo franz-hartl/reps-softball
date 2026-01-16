@@ -8,7 +8,7 @@ All approved copy for the website. Research-driven, direct coach voice.
 
 ### What We Are
 - **Softball-first facility** — not a baseball facility that "also does softball"
-- **Built by women who played** — female instructors who understand fastpitch
+- **Built by Milford** — people who played, coaches who stayed
 - **Community home base** — where younger players watch older players
 - **Development-focused** — confidence and character alongside skills
 
@@ -298,7 +298,7 @@ R.E.P.S. — Indoor Softball Training in Milford, CT
 
 ### Homepage Description
 ```
-The home base for Milford softball. Built by women who played, for the girls coming up behind them. Book a lane online.
+The home base for Milford softball. Built by Milford, for the players coming up next. Book a lane online.
 ```
 
 ---
@@ -330,5 +330,5 @@ It's a softball facility.
 
 ### Against Generic Training Centers
 ```
-Built by women who played, for the girls coming up behind them.
+Built by Milford, for the players coming up next.
 ```
