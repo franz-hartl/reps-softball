@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Options - R.E.P.S.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1a2744;
+      --navy-dark: #0f1829;
+      --navy-light: #2a3d5c;
+      --neon: #39ff14;
+      --pink: #ff0080;
+      --white: #ffffff;
+      --gray: #c8cdd4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--navy-dark);
+      color: var(--white);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Crete Round', serif;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--neon);
+    }
+
+    .option {
+      background: rgba(15, 24, 41, 0.85);
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .option-label {
+      background: var(--pink);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.75rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-headline {
+      font-family: 'Crete Round', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-sub {
+      text-align: center;
+      color: var(--gray);
+      font-size: 1.25rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
+    .accent-dot { color: var(--neon); }
+    .accent { color: var(--neon); }
+
+    /* OPTION A: Current side-by-side */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      max-width: 700px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .info-item h3 {
+      font-family: 'Crete Round', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .info-item p {
+      color: var(--gray);
+      font-size: 1.125rem;
+    }
+
+    /* OPTION B: Two stacked lines */
+    .flow-steps {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 500px;
+    }
+
+    .flow-step {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray);
+    }
+
+    .flow-step strong {
+      color: var(--white);
+    }
+
+    /* OPTION C: Single sentence */
+    .flow-single {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 500px;
+      font-size: 1.25rem;
+      color: var(--gray);
+    }
+
+    .equipment-line {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Layout Options</h1>
+
+<!-- OPTION A: Current -->
+<div class="option">
+  <span class="option-label">Option A: Current (side-by-side)</span>
+  <h2 class="about-headline">This is where ballplayers train<span class="accent-dot">.</span></h2>
+  <p class="about-sub">Built Milford strong. Open to anyone ready to work.</p>
+  <p class="about-sub">You don't need to be elite to train here. You just need to want to get better.</p>
+
+  <div class="info-grid">
+    <div class="info-item">
+      <h3>First Time?</h3>
+      <p>Email us to get started. We'll walk you through it.</p>
+    </div>
+    <div class="info-item">
+      <h3>Ready to Work?</h3>
+      <p>Once you're set up: <span class="accent">book online</span> and get after it.</p>
+    </div>
+  </div>
+  <p class="equipment-line">Bring her bat and glove. Helmets and machines are here.</p>
+</div>
+
+<!-- OPTION B: Two stacked lines -->
+<div class="option">
+  <span class="option-label">Option B: Two stacked lines</span>
+  <h2 class="about-headline">This is where ballplayers train<span class="accent-dot">.</span></h2>
+  <p class="about-sub">Built Milford strong. Open to anyone ready to work.</p>
+  <p class="about-sub">You don't need to be elite to train here. You just need to want to get better.</p>
+
+  <div class="flow-steps">
+    <p class="flow-step"><strong>First time?</strong> Email us to get started.</p>
+    <p class="flow-step"><strong>Ready to train?</strong> Book a lane.</p>
+  </div>
+  <p class="equipment-line">Bring her bat and glove. Helmets and machines are here.</p>
+</div>
+
+<!-- OPTION C: Single sentence -->
+<div class="option">
+  <span class="option-label">Option C: Single sentence</span>
+  <h2 class="about-headline">This is where ballplayers train<span class="accent-dot">.</span></h2>
+  <p class="about-sub">Built Milford strong. Open to anyone ready to work.</p>
+  <p class="about-sub">You don't need to be elite to train here. You just need to want to get better.</p>
+
+  <p class="flow-single">First time? Email us to get set up. Then book online anytime.</p>
+  <p class="equipment-line">Bring her bat and glove. Helmets and machines are here.</p>
+</div>
+
+</body>
+</html>
