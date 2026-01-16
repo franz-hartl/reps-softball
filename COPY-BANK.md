@@ -298,7 +298,7 @@ R.E.P.S. — Indoor Softball Training in Milford, CT
 
 ### Homepage Description
 ```
-The home base for Milford softball. Built by Milford, for the players coming up next. Book a lane online.
+The home base for Milford softball. Built Milford strong, for the players coming up next. Book a lane online.
 ```
 
 ---
@@ -330,5 +330,5 @@ It's a softball facility.
 
 ### Against Generic Training Centers
 ```
-Built by Milford, for the players coming up next.
+Built Milford strong, for the players coming up next.
 ```
