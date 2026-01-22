@@ -4,7 +4,7 @@
   <defs>
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Crete+Round&amp;display=swap');
-      .main-text { font-family: 'Crete Round', serif; font-size: 68px; letter-spacing: 0.08em; }
+      .main-text { font-family: 'Crete Round', serif; font-size: 68px; }
       .sub-text { font-family: 'Crete Round', serif; font-size: 24px; letter-spacing: 0.15em; }
     </style>
   </defs>
@@ -13,7 +13,7 @@
   <rect width="400" height="160" fill="#1a2744"/>
 
   <!-- R.E.P.S. Wordmark -->
-  <text x="200" y="75" text-anchor="middle" class="main-text" fill="#ffffff">R<tspan fill="#39ff14">.</tspan>E<tspan fill="#39ff14">.</tspan>P<tspan fill="#39ff14">.</tspan>S<tspan fill="#39ff14">.</tspan></text>
+  <text x="50" y="75" class="main-text" fill="#ffffff">R<tspan fill="#39ff14">.</tspan><tspan dx="5" fill="#ffffff">E</tspan><tspan fill="#39ff14">.</tspan><tspan dx="5" fill="#ffffff">P</tspan><tspan fill="#39ff14">.</tspan><tspan dx="5" fill="#ffffff">S</tspan><tspan fill="#39ff14">.</tspan></text>
 
   <!-- SOFTBALL -->
   <text x="200" y="125" text-anchor="middle" class="sub-text" fill="#39ff14">SOFTBALL</text>
