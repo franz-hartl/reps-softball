@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <title>R.E.P.S. Wordmark</title>
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Crete+Round&amp;display=swap');
+      .main-text { font-family: 'Crete Round', serif; font-size: 68px; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- Navy Background -->
+  <rect width="400" height="100" fill="#1a2744"/>
+
+  <!-- R.E.P.S. Wordmark -->
+  <text x="200" y="68" text-anchor="middle" class="main-text" fill="#ffffff">R<tspan fill="#39ff14">.</tspan>E<tspan fill="#39ff14">.</tspan>P<tspan fill="#39ff14">.</tspan>S<tspan fill="#39ff14">.</tspan></text>
+</svg>

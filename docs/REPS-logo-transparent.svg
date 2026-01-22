@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="160" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+  <title>R.E.P.S. Softball Logo (Transparent)</title>
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Crete+Round&amp;display=swap');
+      .main-text { font-family: 'Crete Round', serif; font-size: 68px; letter-spacing: 0.08em; }
+      .sub-text { font-family: 'Crete Round', serif; font-size: 24px; letter-spacing: 0.15em; }
+    </style>
+  </defs>
+
+  <!-- R.E.P.S. Wordmark -->
+  <text x="200" y="75" text-anchor="middle" class="main-text" fill="#ffffff">R<tspan fill="#39ff14">.</tspan>E<tspan fill="#39ff14">.</tspan>P<tspan fill="#39ff14">.</tspan>S<tspan fill="#39ff14">.</tspan></text>
+
+  <!-- SOFTBALL -->
+  <text x="200" y="125" text-anchor="middle" class="sub-text" fill="#39ff14">SOFTBALL</text>
+</svg>
