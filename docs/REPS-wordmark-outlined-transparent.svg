@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
-  <title>R.E.P.S. Wordmark (Outlined - Marketing Ready)</title>
-
-  <!-- Navy Background -->
-  <rect width="320" height="80" fill="#1a2744"/>
+  <title>R.E.P.S. Wordmark (Outlined - Transparent Background)</title>
 
   <!-- R.E.P.S. letterforms - tighter spacing to match website -->
   <g transform="translate(160, 42)">
