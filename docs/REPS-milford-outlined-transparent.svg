@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
-  <title>R.E.P.S. Softball Logo (Outlined - Marketing Ready)</title>
-
-  <!-- Navy Background -->
-  <rect width="320" height="120" fill="#1a2744"/>
+  <title>R.E.P.S. Milford Logo (Outlined - Transparent)</title>
 
   <!-- R.E.P.S. letterforms -->
   <g transform="translate(160, 38)">
@@ -41,39 +38,35 @@
     <circle cx="114" cy="20" r="5" fill="#39ff14"/>
   </g>
 
-  <!-- SOFTBALL text -->
+  <!-- MILFORD text -->
   <g fill="#39ff14" transform="translate(160, 95)">
-    <!-- S -->
-    <g transform="translate(-72, 0)">
-      <path d="M8,-10 C4,-10 0,-9 -2,-7 L0,-4 C2,-6 5,-7 8,-7 C11,-7 13,-6 13,-4 C13,-2 11,-1 7,0 C2,2 0,4 0,7 C0,9 3,10 7,10 C11,10 14,9 16,7 L14,4 C12,6 10,7 7,7 C5,7 4,6 4,5 C4,3 6,2 10,1 C14,0 17,-2 17,-5 C17,-9 14,-10 8,-10 Z"/>
+    <!-- M -->
+    <g transform="translate(-68, 0)">
+      <path d="M0,-10 L0,10 L4,10 L4,-4 L10,6 L12,6 L18,-4 L18,10 L22,10 L22,-10 L18,-10 L11,2 L4,-10 L0,-10 Z"/>
     </g>
-    <!-- O -->
-    <g transform="translate(-52, 0)">
-      <path d="M8,-10 C2,-10 -2,-6 -2,0 C-2,6 2,10 8,10 C14,10 18,6 18,0 C18,-6 14,-10 8,-10 Z M8,-7 C12,-7 14,-4 14,0 C14,4 12,7 8,7 C4,7 2,4 2,0 C2,-4 4,-7 8,-7 Z"/>
+    <!-- I -->
+    <g transform="translate(-42, 0)">
+      <path d="M0,-10 L0,10 L4,10 L4,-10 L0,-10 Z"/>
+    </g>
+    <!-- L -->
+    <g transform="translate(-34, 0)">
+      <path d="M0,-10 L0,10 L14,10 L14,7 L4,7 L4,-10 L0,-10 Z"/>
     </g>
     <!-- F -->
-    <g transform="translate(-32, 0)">
+    <g transform="translate(-16, 0)">
       <path d="M0,-10 L0,10 L4,10 L4,1 L12,1 L12,-2 L4,-2 L4,-7 L13,-7 L13,-10 L0,-10 Z"/>
     </g>
-    <!-- T -->
-    <g transform="translate(-16, 0)">
-      <path d="M0,-10 L0,-7 L5,-7 L5,10 L9,10 L9,-7 L14,-7 L14,-10 L0,-10 Z"/>
-    </g>
-    <!-- B -->
+    <!-- O -->
     <g transform="translate(2, 0)">
-      <path d="M0,-10 L0,10 L10,10 C14,10 16,8 16,5 C16,3 15,1 12,0 C14,-1 15,-3 15,-5 C15,-8 13,-10 9,-10 L0,-10 Z M4,-7 L8,-7 C10,-7 11,-6 11,-4 C11,-3 10,-1 8,-1 L4,-1 L4,-7 Z M4,2 L9,2 C11,2 12,3 12,5 C12,7 11,7 9,7 L4,7 L4,2 Z"/>
+      <path d="M8,-10 C2,-10 -2,-6 -2,0 C-2,6 2,10 8,10 C14,10 18,6 18,0 C18,-6 14,-10 8,-10 Z M8,-7 C12,-7 14,-4 14,0 C14,4 12,7 8,7 C4,7 2,4 2,0 C2,-4 4,-7 8,-7 Z"/>
     </g>
-    <!-- A -->
-    <g transform="translate(22, 0)">
-      <path d="M8,-10 L0,10 L4,10 L6,5 L14,5 L16,10 L20,10 L12,-10 L8,-10 Z M10,-5 L7,3 L13,3 L10,-5 Z"/>
+    <!-- R -->
+    <g transform="translate(24, 0)">
+      <path d="M0,-10 L0,10 L4,10 L4,2 L8,2 L13,10 L18,10 L12,1 C15,0 17,-2 17,-6 C17,-9 14,-10 10,-10 L0,-10 Z M4,-7 L9,-7 C12,-7 13,-6 13,-5 C13,-3 12,-2 9,-2 L4,-2 L4,-7 Z"/>
     </g>
-    <!-- L -->
-    <g transform="translate(44, 0)">
-      <path d="M0,-10 L0,10 L14,10 L14,7 L4,7 L4,-10 L0,-10 Z"/>
-    </g>
-    <!-- L -->
-    <g transform="translate(60, 0)">
-      <path d="M0,-10 L0,10 L14,10 L14,7 L4,7 L4,-10 L0,-10 Z"/>
+    <!-- D -->
+    <g transform="translate(46, 0)">
+      <path d="M0,-10 L0,10 L10,10 C16,10 20,6 20,0 C20,-6 16,-10 10,-10 L0,-10 Z M4,-7 L9,-7 C13,-7 16,-4 16,0 C16,4 13,7 9,7 L4,7 L4,-7 Z"/>
     </g>
   </g>
 </svg>
