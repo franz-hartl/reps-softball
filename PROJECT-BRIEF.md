@@ -52,10 +52,9 @@ They need to feel:
 
 ## The Credentials
 
-- Nine state championships, four regional championships
+- Nine state championships
 - Hall of Fame coaches (Pace University)
 - 25 years coaching Milford kids
-- Competed on ESPN
 
 **Trust line:** Nine state championships. Hall of Fame coaches. A place for the next generation.
 

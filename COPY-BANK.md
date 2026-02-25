@@ -120,7 +120,7 @@ Building tradition.
 
 ### Extended Version (for expanded About page)
 ```
-R.E.P.S. was founded by coaches and families from Connecticut's most successful Little League softball program—a program that won nine state championships and four regional championships in six years, and competed on ESPN.
+R.E.P.S. was founded by coaches and families from Connecticut's most successful Little League softball program—a program that won nine state championships in six years.
 
 The ripple effect is real here. Younger players watch older players. A team that develops together raises the level of their league. That's what we're building.
 ```
@@ -226,7 +226,7 @@ Suzette Gehl: Pace University Hall of Fame (Class of 2016). All-time leader in c
 
 Jeanette Tierney: 12 varsity letters at Foran High School—only the third female in school history. Captain of all three varsity teams senior year. All-State shortstop. Four-year starter and captain at Pace University. Career leader in home runs. Overcame major knee injury to earn athletic scholarship. Co-owner of Barracuda Travel Softball.
 
-Joe Urban: 25+ years developing student-athletes at every competitive level. Led Milford CT Little League to State Championship and Regional Finals (ESPN broadcast).
+Joe Urban: 25+ years developing student-athletes at every competitive level. Led Milford CT Little League to State Championship.
 ```
 
 ---
