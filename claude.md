@@ -57,7 +57,7 @@ This fits the brand: Preparation. Sacrifice. Put in the reps.
 | Batting Lane | $30/30min |
 | Half Facility (3 lanes) | $100/hr |
 | Full Facility (6 lanes) | $200/hr |
-| Monthly Membership | $100/mo |
+| Monthly Membership | $125/mo |
 
 Pitching machines included.
 

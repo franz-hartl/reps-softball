@@ -140,7 +140,7 @@ Pitching Lane              $25/30min
 Batting Lane               $30/30min
 Half Facility (3 lanes)    $100/hr
 Full Facility (6 lanes)    $200/hr
-Monthly Membership         $100/mo
+Monthly Membership         $125/mo
 ```
 
 ### Note
@@ -150,7 +150,7 @@ Pitching machines included. 4 batting lanes, 2 pitching lanes.
 
 ### Membership Line
 ```
-$100/month. Train whenever lanes are open.
+$125/month. Train whenever lanes are open.
 ```
 
 ### CTA
